@@ -1,0 +1,54 @@
+.tmplt-part-post {
+  box-shadow: 0 0 6px rgba(#000, 10%);
+  border-radius: 15px;
+  background-color: #fff;
+  display: block;
+
+  @media #{$tablet-s} {
+    border-radius: 30px;
+  }
+
+  .post-image {
+    padding-top: 85%;
+    position: relative;
+    border-radius: 15px 15px 0 0;
+    overflow: hidden;
+    background-color: $dark-blue;
+
+    @media #{$tablet-s} {
+      border-radius: 30px 30px 0 0;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.03);
+      }
+    }
+
+    .pills-holder {
+      position: absolute;
+      bottom: 14px;
+      right: 9px;
+
+      @media #{$tablet-s} {
+        bottom: 20px;
+        right: 22px;
+      }
+    }
+
+    img {
+      @include transition();
+      @include cropped-img();
+    }
+  }
+
+  .post-title {
+    font-family: "halyard-display", sans-serif;
+    font-size: 18px;
+    color: $dark-blue;
+    line-height: 1.3em;
+    text-align: center;
+    padding: 0.7rem 1rem;
+    box-sizing: border-box;
+  }
+}

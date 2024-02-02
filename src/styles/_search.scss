@@ -1,0 +1,58 @@
+.search-wrap {
+    overflow: hidden;
+    background-color: $green;
+    padding: 120px 15px;
+    box-sizing: border-box;
+
+    @media #{$tablet-s} {
+        padding: 150px 6.21vw;
+    }
+
+    .search-result {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+
+        .search-holder {
+            box-sizing: border-box;
+            margin-bottom: 40px;
+            width: 100%;
+
+            @media #{$tablet-xs} {
+                padding: 0 px-to-vw(40);
+                margin-bottom: px-to-vw(80);
+                width: 50%;
+            }
+
+            @media #{$laptop-s} {
+                width: 33.3333%;
+            }
+        }
+    }
+}
+
+.no-posts-wrap {
+    height: 100vh;
+    overflow: hidden;
+    background-color: $green;
+    padding: 6.21vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .no-posts-wrap-content {
+        text-align: center;
+
+        p {
+            @include title-4();
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        a {
+            &:hover {
+                background-color: $dark-blue;
+            }
+        }
+    }
+}

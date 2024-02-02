@@ -1,0 +1,46 @@
+.tmplt-part-project {
+  display: block;
+
+  @media #{$tablet-s} {
+    border-radius: 30px;
+  }
+
+  &:hover {
+    .post-image {
+      img {
+        transform: scale(1.03);
+      }
+    }
+
+    .project-info {
+      .project-button {
+        background-color: $dark-blue;
+      }
+    }
+  }
+
+  .post-image {
+    padding-top: 85%;
+    position: relative;
+    overflow: hidden;
+    background-color: $dark-blue;
+    border-radius: 20px;
+
+    img {
+      @include cropped-img();
+      @include transition();
+    }
+  }
+
+  .project-info {
+    padding: 15px 20px;
+    box-sizing: border-box;
+    position: relative;
+
+    .project-title {
+      @include title-4();
+      width: 100%;
+      text-align: center;
+    }
+  }
+}

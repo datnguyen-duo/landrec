@@ -1,0 +1,129 @@
+.thank_you_wrap {
+    box-sizing: border-box;
+    background-color: $dark-blue;
+    padding: 144px 37px 72px;
+
+    @media #{$tablet-s} {
+        padding-top: px-to-vw(120);
+    }
+
+    .thank_you_content {
+        box-sizing: border-box;
+        margin: auto;
+
+        //@media #{$tablet-s} {
+        //    max-width: px-to-vw(1600);
+        //}
+
+        @media #{$laptop-s} {
+            max-width: px-to-vw(1400);
+        }
+
+        .thank_you_header {
+            .headline_holder {
+                text-align: center;
+
+                h1 {
+                    @include title-2();
+                    color: #fff;
+                }
+
+                p {
+                    @include text-2();
+                    margin-top: 15px;
+                    color: #fff;
+                    text-align: center;
+
+                    @media #{$tablet-s} {
+                        margin-top: 20px;
+                    }
+                }
+
+                .site-button {
+                    background-color: $green;
+                    color: #fff;
+                    margin-top: 55px;
+
+                    @media #{$tablet-s} {
+                        margin-top: px-to-vw(60);
+                    }
+
+                    &:hover {
+                        background-color: #fff;
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+
+        .order-details {
+            border: 3px solid #fff;
+            border-radius: 20px;
+            margin-top: 60px;
+
+            @media #{$tablet-s} {
+                margin-top: px-to-vw(140);
+            }
+
+            .order-details-content {
+                padding: 40px;
+
+                @media #{$tablet-s} {
+                    padding: px-to-vw(60) px-to-vw(120);
+                }
+
+                h2 {
+                    @include title-4();
+                    text-align: center;
+                    color: #fff;
+                    margin-bottom: 45px;
+
+                    @media #{$tablet-l} {
+                        margin-bottom: px-to-vw(60);
+                    }
+                }
+
+                .order-table {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    @media #{$tablet-l} {
+                        flex-wrap: nowrap;
+                    }
+
+                    .single-item {
+                        text-align: center;
+                        width: 100%;
+                        margin-bottom: 30px;
+
+                        @media #{$tablet-l} {
+                            text-align: left;
+                            margin-bottom: 0;
+                            width: auto;
+                        }
+
+                        &:last-child {
+                            margin-bottom: 0;
+                        }
+
+                        p {
+                            @include text-1();
+                            color: #fff;
+
+                            span {
+                                @include text-3();
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .old_thankyou {
+        display: none;
+    }
+}

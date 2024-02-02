@@ -1,0 +1,279 @@
+.tmplt-part-img-with-desc {
+  position: relative;
+  min-height: 45vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $dark-blue;
+  z-index: 0;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+
+  .section-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 200px 25px 150px;
+    box-sizing: border-box;
+
+    form {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: px-to-vw(90) auto 0;
+      max-width: 290px;
+
+      @media #{$tablet-s} {
+        max-width: 620px;
+      }
+
+      @media #{$laptop-s} {
+        max-width: 800px;
+      }
+
+      @media #{$desktop-s} {
+        max-width: 1100px;
+      }
+
+      &.sent {
+        .submit-input-holder {
+          button {
+            &:after {
+              content: "\e017";
+            }
+          }
+        }
+      }
+
+      &.submitting {
+        .submit-input-holder {
+          button {
+            &:after {
+              content: "\e01c";
+              animation-name: spin;
+              animation-duration: 2s;
+              animation-timing-function: linear;
+              animation-iteration-count: infinite;
+            }
+          }
+        }
+      }
+
+      .input-holder {
+        width: 100%;
+        margin-bottom: 10px;
+
+        @media #{$tablet-s} {
+          margin-bottom: 0;
+          margin-right: 0.5rem;
+          width: auto;
+          flex: 1;
+        }
+
+        input {
+          &:not([type="submit"]) {
+            @include text-2();
+            width: 100%;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 0.7rem 1rem;
+            @media #{$tablet-s} {
+              text-align: left;
+            }
+
+            &::placeholder {
+              color: inherit;
+            }
+
+            &:focus {
+              outline-color: $green;
+            }
+          }
+        }
+      }
+
+      .submit-input-holder {
+        width: 100%;
+
+        @media #{$tablet-s} {
+          width: auto;
+        }
+
+        button {
+          @include transition();
+          @include input();
+          min-width: 250px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          background-color: $green;
+          color: #fff;
+
+          &:after {
+            font-family: WooCommerce;
+            margin-left: 0.53em;
+            vertical-align: bottom;
+          }
+        }
+
+        input[type="submit"] {
+          min-width: 220px;
+          @include text-1();
+          color: #fff;
+          width: 100%;
+          background-color: $green;
+          border: none;
+          border-radius: 5px;
+          height: 45px;
+          @include transition();
+          cursor: pointer;
+
+          &:hover {
+            background-color: $dark-blue;
+          }
+
+          &::placeholder {
+            color: inherit;
+          }
+
+          @media #{$tablet-s} {
+            height: 60px;
+            border-radius: 15px;
+          }
+
+          @media #{$tablet-xl} {
+            min-height: 70px;
+          }
+
+          @media #{$desktop-s} {
+            height: 80px;
+          }
+        }
+      }
+
+      .wpcf7-not-valid-tip {
+        @include text-2();
+        color: #fff;
+        text-align: center;
+        margin-top: 5px;
+
+        @media #{$tablet-s} {
+          text-align: left;
+        }
+      }
+
+      .wpcf7-response-output {
+        @include text-1();
+        width: 100%;
+        margin: 0;
+        border: 0;
+        color: #fff;
+        text-align: center;
+        padding-left: 0;
+
+        @media #{$tablet-s} {
+          text-align: left;
+        }
+      }
+
+      .wpcf7-spinner {
+        display: none;
+        background-color: #d6d6d6;
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translate(-50%, calc(100% + 20px));
+        margin: 0;
+
+        &:before {
+          background-color: $dark-blue;
+        }
+      }
+    }
+
+    .section-title {
+      @include title-2();
+      color: #fff;
+
+      @media #{$tablet-s} {
+        width: 100vw;
+        margin: auto;
+      }
+    }
+
+    .section-description {
+      p {
+        @include text-1();
+        color: #fff;
+      }
+    }
+
+    .site-button {
+      margin-top: 20px;
+
+      @media #{$tablet-s} {
+        margin-top: 40px;
+      }
+    }
+  }
+
+  .section-background {
+    @include cropped-img();
+  }
+
+  .wave-border {
+    position: absolute;
+    top: 0;
+    width: 102%;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%) rotate(180deg);
+
+    .border {
+      position: relative;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        position: relative;
+        // transform: translateY(22%);
+        overflow: visible;
+        path {
+          stroke-width: 120px;
+          @media #{$tablet-s} {
+            stroke-width: 55px;
+          }
+        }
+      }
+    }
+
+    .border-bg {
+      position: absolute;
+      left: 50%;
+      z-index: 0;
+      top: 0;
+      transform: translate(-50%, 9%) scale(-1, -1);
+      width: 102%;
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
