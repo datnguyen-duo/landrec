@@ -73,7 +73,7 @@
           .images {
             .col {
               @media #{$tablet-s} {
-                padding-right: 1.59vw;
+                padding-right: 1.6vw;
               }
             }
           }
@@ -105,7 +105,7 @@
 
           .images {
             .col {
-              padding-left: 1.59vw;
+              padding-left: 1.6vw;
 
               .image {
                 transform: rotateY(180deg);
@@ -352,7 +352,7 @@
   }
 
   .posts-section {
-    margin: 6vw auto;
+    margin: $spacer auto;
 
     .section-content {
       padding: 0 20px;

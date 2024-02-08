@@ -91,7 +91,7 @@
         },
         {
             "key": "field_632254573816a",
-            "label": "Quote Description",
+            "label": "Quote",
             "name": "second_quote_description",
             "type": "textarea",
             "instructions": "",
@@ -110,7 +110,7 @@
         },
         {
             "key": "field_632085e60b86d",
-            "label": "3 - Contact Us",
+            "label": "3 - Form",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -126,7 +126,7 @@
         },
         {
             "key": "field_632085fa0b86f",
-            "label": "Contact Headline",
+            "label": "Headline",
             "name": "contact_headline",
             "type": "text",
             "instructions": "",
@@ -154,7 +154,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -163,5 +163,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1706842074
+    "modified": 1707364670
 }

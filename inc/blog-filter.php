@@ -53,26 +53,11 @@ function print_posts( $query = '' ) {
                 $categories = get_the_terms(get_the_ID(), 'category'); ?>
                 <div class="post">
                     <div class="post-image">
-                        <?= get_the_post_thumbnail(get_the_ID(),'large') ?>
-
-                        <!-- <?php if( $categories ): ?>
-                            <div class="pills-holder">
-                                <?php foreach ( $categories as $category ): ?>
-                                    <span class="pill"><?= $category->name ?></span>
-                                <?php endforeach; ?>
-                            </div>
-                        <?php endif; ?> -->
+                        <?= get_the_post_thumbnail(get_the_ID(), array('700', 'auto')) ?>
                     </div>
                     <div class="post-info-holder">
-                        <div class="post-info-header">
-                            <h2 class="post-title"><?php the_title() ?></h2>
-                            <p class="post-date"><?= get_the_date() ?></p>
-                        </div>
-
-                        <p class="post-excerpt">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras dignissim condimentum nisl, ut posuere justo condimentum id. Proin et sollicitudin odio. Lorem ipsum dolor sit amet, consectetur.
-                        </p>
-
+                        <h2 class="post-title"><?php the_title() ?></h2>
+                        <p class="post-excerpt"><?php echo wp_trim_words( get_the_excerpt(), 25, ' [...]' ); ?></p>
                         <a href="<?php the_permalink() ?>" class="site-button dark-button">Read More</a>
                     </div>
                 </div>
@@ -85,19 +70,15 @@ function print_posts( $query = '' ) {
                     <div class="button-circle">
                         <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="">
                     </div>
-                    <span>Previous Page</span>
                 </div>
                 <div class="posts-pages">
                     <ul>
                         <?php for( $i=1; $i <= $total_pages; $i++ ): ?>
-                            <li data-page="<?php echo $i; ?>" class="pagination-page <?= ($current_page == $i) ? ' button-circle' : null; ?>">
-                                <?php echo $i; ?>
-                            </li>
+                            <li data-page="<?php echo $i; ?>" class="pagination-page <?= ($current_page == $i) ? ' active' : null; ?>"></li>
                         <?php endfor; ?>
                     </ul>
                 </div>
                 <div class="pagination-page next-prev-page next-page" data-page="<?= ($current_page == $total_pages) ? 1 : $current_page+1; ?>">
-                    <span>Next page</span>
                     <div class="button-circle">
                         <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="">
                     </div>

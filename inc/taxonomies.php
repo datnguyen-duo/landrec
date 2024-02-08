@@ -127,4 +127,4 @@ function register_taxonomies() {
         'rewrite'           => array( 'slug' => 'product-material' ),
     ) );
 }
-add_action( 'init', 'register_taxonomies', 0 );
+// add_action( 'init', 'register_taxonomies', 0 );

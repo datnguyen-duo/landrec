@@ -118,7 +118,7 @@ swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper__WEBPACK_IMPORTED_MODULE_
 var cardsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".cards-swiper", {
   speed: 750,
   slidesPerView: 1.2,
-  spaceBetween: 25,
+  spaceBetween: 16,
   centeredSlides: true,
   watchSlidesProgress: true,
   watchOverflow: true,
@@ -129,12 +129,10 @@ var cardsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".cards-swiper"
   breakpoints: {
     768: {
       slidesPerView: 2,
-      spaceBetween: 40,
       centeredSlides: false
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 50,
       centeredSlides: false
     }
   }
@@ -680,31 +678,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var swiper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper */ "./node_modules/swiper/swiper.esm.js");
 
 swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper.use([swiper__WEBPACK_IMPORTED_MODULE_0__.Autoplay, swiper__WEBPACK_IMPORTED_MODULE_0__.Navigation]);
-let gallerySwiper = "";
-const $popupOpener = $('.gallery-holder');
-$popupOpener.on('click', function () {
-  let popupIndex = $(this).data('popup-index');
-  $('.gallery-popup').fadeOut();
-  $('#gallery-popup-' + popupIndex).fadeIn();
-  $('body').addClass('no-scroll');
-  if (gallerySwiper) {
-    gallerySwiper.destroy();
+var modalIcon = document.querySelector(".modal-icon"),
+  close = document.querySelector(".close");
+var gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".gallery-swiper", {
+  speed: 400,
+  slidesPerView: "auto",
+  centeredSlides: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev"
   }
-  gallerySwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__.Swiper(".gallery-swiper-" + popupIndex, {
-    speed: 750,
-    slidesPerView: 1,
-    spaceBetween: 25,
-    watchOverflow: true,
-    navigation: {
-      prevEl: ".gallery-swiper-button-prev-" + popupIndex,
-      nextEl: ".gallery-swiper-button-next-" + popupIndex
-    }
+});
+if (modalIcon) {
+  modalIcon.addEventListener("click", function () {
+    document.body.classList.add("init-modal");
   });
-});
-$('.close-popup').on('click', function () {
-  $(this).parent().parent().fadeOut();
-  $('body').removeClass('no-scroll');
-});
+  close.addEventListener("click", function () {
+    document.body.classList.remove("init-modal");
+  });
+}
 
 /***/ }),
 

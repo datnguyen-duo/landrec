@@ -56,7 +56,7 @@
         },
         {
             "key": "field_62ffa341109da",
-            "label": "2 - Contact",
+            "label": "2 - Content",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -72,7 +72,7 @@
         },
         {
             "key": "field_63034b0245fe0",
-            "label": "Contact Section",
+            "label": "Group",
             "name": "contact_section",
             "type": "group",
             "instructions": "",
@@ -106,7 +106,7 @@
                 },
                 {
                     "key": "field_6303504545fe2",
-                    "label": "Contacts",
+                    "label": "Contact Info",
                     "name": "contacts",
                     "type": "repeater",
                     "instructions": "",
@@ -142,7 +142,7 @@
                 },
                 {
                     "key": "field_6303477bffc56",
-                    "label": "Forms Title",
+                    "label": "Form Headline",
                     "name": "forms_title",
                     "type": "text",
                     "instructions": "",
@@ -180,7 +180,7 @@
                     "sub_fields": [
                         {
                             "key": "field_63034748e62d7",
-                            "label": "Form Title",
+                            "label": "Subject",
                             "name": "form_title",
                             "type": "text",
                             "instructions": "",
@@ -199,7 +199,7 @@
                         },
                         {
                             "key": "field_63034740e62d6",
-                            "label": "Form Shortcode",
+                            "label": "Shortcode",
                             "name": "form_shortcode",
                             "type": "text",
                             "instructions": "",
@@ -222,7 +222,7 @@
         },
         {
             "key": "field_62ffa341109e9",
-            "label": "3 - Image With Description",
+            "label": "3 - CTA",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -238,7 +238,7 @@
         },
         {
             "key": "field_62ffa341109f1",
-            "label": "Image With Description Section",
+            "label": "Group",
             "name": "image_with_description_section",
             "type": "group",
             "instructions": "",
@@ -296,7 +296,7 @@
                 },
                 {
                     "key": "field_62ffa3412a81c",
-                    "label": "Description",
+                    "label": "Paragraph",
                     "name": "description",
                     "type": "textarea",
                     "instructions": "",
@@ -348,42 +348,6 @@
                     "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_63034a290fd57",
-            "label": "Contacts",
-            "name": "contacts",
-            "type": "repeater",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "collapsed": "",
-            "min": 0,
-            "max": 0,
-            "layout": "table",
-            "button_label": "Add Contact",
-            "sub_fields": [
-                {
-                    "key": "field_63034a340fd58",
-                    "label": "Contact",
-                    "name": "contact",
-                    "type": "link",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "return_format": "array"
-                }
-            ]
         }
     ],
     "location": [
@@ -396,7 +360,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -405,5 +369,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1706834513
+    "modified": 1707364470
 }

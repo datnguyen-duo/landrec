@@ -39,7 +39,7 @@
         },
         {
             "key": "field_65ba9ea254b95",
-            "label": "Sub-heading",
+            "label": "Text",
             "name": "subheading",
             "type": "text",
             "instructions": "",
@@ -268,5 +268,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1706839566
+    "modified": 1707361610
 }

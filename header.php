@@ -79,25 +79,12 @@ $checkoutPage = (is_checkout() && empty(is_wc_endpoint_url('order-received')));
                     <?php icon_search() ?>
                 </div>
 
+                <?php if (get_field("cart_icon", "option")): ?>
                 <div class="button-circle cart custom-side-cart-opener">
-<!--                    <img src="--><?//= get_template_directory_uri() ?><!--/src/images/icons/cart.svg" alt="">-->
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="23" viewBox="0 0 28 23">
-                <defs>
-                    <clipPath id="clip-path">
-                    <rect id="Rectangle_22457" data-name="Rectangle 22457" width="28" height="23" transform="translate(0 0)" fill="none"/>
-                    </clipPath>
-                </defs>
-                <g id="Group_6007" data-name="Group 6007" transform="translate(0 0.343)">
-                    <g id="Group_6006" data-name="Group 6006" transform="translate(0 -0.343)" clip-path="url(#clip-path)">
-                    <path id="Path_48038" data-name="Path 48038" d="M27.714,8.255H23.433l-5.541-8A.59.59,0,0,0,17.072.1L16.1.776a.591.591,0,0,0-.15.821l4.611,6.659H7.745L12.369,1.6A.59.59,0,0,0,12.22.776L11.251.1a.59.59,0,0,0-.821.149l-5.558,8H.59a.59.59,0,0,0-.59.59v1.769a.59.59,0,0,0,.59.59H1.9l3.041,9.56A2.35,2.35,0,0,0,7.19,22.407H21.114a2.35,2.35,0,0,0,2.248-1.644L26.4,11.2h1.311a.59.59,0,0,0,.59-.59V8.845a.59.59,0,0,0-.59-.59" transform="translate(0 0.355)" />
-                    </g>
-                </g>
-                </svg>
-
-
-
+                    <?php echo wp_get_attachment_image( get_field('cart_icon', 'option')['id'], array('18', '18'), false, '' ); ?>
+                    <?php echo wp_get_attachment_image( get_field('cart_icon_active', 'option')['id'], array('18', '18'), false, '' ); ?>
                 </div>
-
+                <?php endif; ?>
                 <?php if( has_nav_menu('menu-4') ): ?>
                     <div class="button-circle hamburger">
                         <span></span>
@@ -121,51 +108,19 @@ $checkoutPage = (is_checkout() && empty(is_wc_endpoint_url('order-received')));
                     ); ?>
                 </nav>
 
+                <?php if (get_field("social_links", "option")): ?>
                 <div class="social-media">
                     <ul>
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/facebook-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/twitter-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/instagram-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/linkedin-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/youtube-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/pinterest-w.svg' ?>" alt="">
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="" class="button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/social/tiktok-w.svg' ?>" alt="">
-                            </a>
-                        </li>
+                        <?php foreach(get_field("social_links", "option") as $link) :?>
+                            <li>
+                                <a href="<?php echo $link["link"]; ?>" class="button-circle">
+                                    <img src="<?= $link["icon"]["url"] ?>" alt="social-icon">
+                                </a>
+                            </li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
+                <?php endif; ?>
             </div>
         </div>
     <?php endif;

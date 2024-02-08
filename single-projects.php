@@ -13,9 +13,6 @@ $projects = get_field('projects', $post_id); ?>
                 'button' => null,
                 'files' => null,
                 'image' => get_the_post_thumbnail(),
-            ),
-            'border' => array(
-                'color' => '#FBE681',
             )
         )) ?>
 
@@ -56,13 +53,47 @@ $projects = get_field('projects', $post_id); ?>
             </div>
             <?php endif; ?>
 
-            <div class="swiper project-gallery-section__images">
+            <?php if( $gallery ): ?>
+            <div class="project-gallery-section__image">
+               <?php echo wp_get_attachment_image($gallery[0]['image']['ID'],'large',''); ?>
+               <div class="modal-icon">
+               <svg xmlns="http://www.w3.org/2000/svg" width="28.143" height="28.143" viewBox="0 0 28.143 28.143">
+                <g id="Group_5455" data-name="Group 5455" transform="translate(-860.5 -2959.5)">
+                    <line id="Line_556" data-name="Line 556" y2="26.143" transform="translate(874.572 2960.5)" fill="none" stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    <line id="Line_557" data-name="Line 557" y2="26.143" transform="translate(887.643 2973.572) rotate(90)" fill="none" stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                </g>
+                </svg>
+
+               </div>
+            </div>
+            <?php endif; ?>
+
+            <div class="swiper gallery-swiper">
                 <div class="swiper-wrapper">
                     <?php foreach( $gallery as $item ): ?>
                         <div class="swiper-slide">
                             <?= wp_get_attachment_image($item['image']['ID'],'large','') ?>
                         </div>
                     <?php endforeach; ?>
+                </div>
+                <div class="swiper-button-prev swiper-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.374" height="13.664" viewBox="0 0 17.374 13.664">
+                        <g id="Group_5502" data-name="Group 5502" transform="translate(1 1.414)">
+                            <path id="Path_50" data-name="Path 50" d="M-15831.344,4792.432l5.419,5.418-5.419,5.417" transform="translate(15841.297 -4792.432)" fill="none" stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            <line id="Line_515" data-name="Line 515" x2="14.475" transform="translate(0 5.369)" fill="none" stroke="inherit" stroke-linecap="round" stroke-width="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="swiper-button-next swiper-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17.374" height="13.664" viewBox="0 0 17.374 13.664">
+                        <g id="Group_5502" data-name="Group 5502" transform="translate(1 1.414)">
+                            <path id="Path_50" data-name="Path 50" d="M-15831.344,4792.432l5.419,5.418-5.419,5.417" transform="translate(15841.297 -4792.432)" fill="none" stroke="inherit" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                            <line id="Line_515" data-name="Line 515" x2="14.475" transform="translate(0 5.369)" fill="none" stroke="inherit" stroke-linecap="round" stroke-width="2"/>
+                        </g>
+                    </svg>
+                </div>
+                <div class="close">
+                    <img src="<?= get_template_directory_uri().'/src/images/icons/x.svg' ?>" alt="">
                 </div>
             </div>
         </section>

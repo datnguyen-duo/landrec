@@ -81,7 +81,7 @@
         },
         {
             "key": "field_631223194bb32",
-            "label": "Single Product",
+            "label": "Product CTA",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -97,7 +97,7 @@
         },
         {
             "key": "field_631222c84bb2d",
-            "label": "Image with description",
+            "label": "CTA",
             "name": "single_product_image_with_description_section",
             "type": "group",
             "instructions": "This section is for all products",
@@ -191,7 +191,7 @@
         },
         {
             "key": "field_6321b4fea254b",
-            "label": "Cart Popup",
+            "label": "Cart",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -206,8 +206,56 @@
             "endpoint": 0
         },
         {
+            "key": "field_65c01e4ca9888",
+            "label": "Cart Icon",
+            "name": "cart_icon",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_65c01e5aa9889",
+            "label": "Cart Icon (active)",
+            "name": "cart_icon_active",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "33",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "preview_size": "medium",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
             "key": "field_6321b508a254c",
-            "label": "Cart Popup Description",
+            "label": "Cart Popup",
             "name": "cart_popup_description",
             "type": "wysiwyg",
             "instructions": "",
@@ -226,7 +274,7 @@
         },
         {
             "key": "field_6321bef4e6013",
-            "label": "Checkout",
+            "label": "Checkout Checkbox",
             "name": "",
             "type": "tab",
             "instructions": "",
@@ -242,7 +290,7 @@
         },
         {
             "key": "field_6321befbe6014",
-            "label": "Checkout Checkbox Description",
+            "label": "Checkbox Text",
             "name": "checkout_checkbox_description",
             "type": "textarea",
             "instructions": "",
@@ -261,7 +309,7 @@
         },
         {
             "key": "field_6321bf1ce6015",
-            "label": "Checkout Checkbox Link",
+            "label": "Checkbox Link",
             "name": "checkout_checkbox_link",
             "type": "link",
             "instructions": "",
@@ -285,12 +333,12 @@
         ]
     ],
     "menu_order": 0,
-    "position": "normal",
+    "position": "acf_after_title",
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
     "active": true,
     "description": "",
-    "modified": 1706720124
+    "modified": 1707362094
 }

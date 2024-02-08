@@ -6,7 +6,9 @@
   justify-content: center;
   background-color: $dark-blue;
   z-index: 0;
-
+  @media screen and (max-width: 768px) {
+    min-height: 520px;
+  }
   &:after {
     content: "";
     display: block;
@@ -24,9 +26,9 @@
     text-align: center;
     position: relative;
     z-index: 2;
-    padding: 200px 25px 150px;
+    padding: $spacer-ext $gutter $spacer;
     box-sizing: border-box;
-
+    width: 100%;
     form {
       display: flex;
       flex-wrap: wrap;
@@ -209,11 +211,7 @@
     .section-title {
       @include title-2();
       color: #fff;
-
-      @media #{$tablet-s} {
-        width: 100vw;
-        margin: auto;
-      }
+      margin-bottom: 0.2rem;
     }
 
     .section-description {
@@ -224,11 +222,7 @@
     }
 
     .site-button {
-      margin-top: 20px;
-
-      @media #{$tablet-s} {
-        margin-top: 40px;
-      }
+      margin-top: 2rem;
     }
   }
 

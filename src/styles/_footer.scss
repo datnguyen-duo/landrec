@@ -1,11 +1,11 @@
 #site-footer {
   margin-top: auto;
   background-color: $dark-blue;
-  padding: $gutter clamp(25px, 5vw, 96px) 2rem;
+  padding: $spacer clamp(25px, 5vw, 96px) 2rem;
 
   .logo-holder {
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: $gutter;
 
     .site-logo {
       width: 216px;

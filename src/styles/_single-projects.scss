@@ -37,6 +37,7 @@
     > * {
       border-radius: 20px;
       width: 100%;
+      overflow: hidden;
     }
 
     &__info {
@@ -67,17 +68,141 @@
       }
     }
 
-    &__images {
+    &__image {
       width: 100%;
       aspect-ratio: 1;
-
+      position: relative;
       @media #{$tablet-s} {
         aspect-ratio: 1.8;
       }
-      img {
+
+      > img {
         width: 100%;
         height: 100%;
         object-fit: cover;
+      }
+
+      .modal-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        stroke: $dark-blue;
+        cursor: pointer;
+        transition:
+          background-color 0.3s ease-in-out,
+          stroke 0.3s ease-in-out;
+        svg {
+          width: 50%;
+        }
+
+        &:hover {
+          background-color: $dark-blue;
+          svg {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+
+    .swiper {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: $dark-blue;
+      opacity: 0;
+      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+      border-radius: 0;
+      transition: opacity 0.3s ease-in-out;
+      body.init-modal & {
+        opacity: 1;
+        pointer-events: initial;
+      }
+      &-wrapper {
+        align-items: center;
+      }
+
+      &-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          max-width: calc(100% - 4 * $gutter);
+          object-fit: contain;
+          max-height: 90%;
+
+          @media screen and (max-width: 768px) {
+            max-width: 95%;
+          }
+        }
+      }
+
+      &-button {
+        stroke: $dark-blue;
+        background: #fff;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+
+        @media screen and (max-width: 768px) {
+          bottom: 2rem;
+          top: unset;
+          left: 0 !important;
+          right: 0 !important;
+          margin: auto;
+          transform: unset;
+        }
+        svg {
+          width: 50%;
+        }
+        &::before,
+        &::after {
+          content: unset;
+        }
+        &-prev {
+          transform: rotate(180deg);
+          left: $gutter;
+
+          @media screen and (max-width: 768px) {
+            transform: translateX(-70%) rotate(180deg);
+          }
+        }
+
+        &-next {
+          right: $gutter;
+          @media screen and (max-width: 768px) {
+            transform: translateX(70%);
+          }
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        stroke: $dark-blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 1;
+        cursor: pointer;
+        img {
+          width: 40%;
+        }
       }
     }
   }
@@ -370,23 +495,23 @@
       }
 
       &:not(:first-child) {
-        margin-top: -75px;
+        margin-top: -110px;
       }
 
       &:nth-child(odd) {
-        clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
+        clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
 
         @media #{$tablet-s} {
-          clip-path: polygon(0 0, 100% 12%, 100% 88%, 0 100%);
+          clip-path: polygon(0 0, 100% 18%, 100% 82%, 0 100%);
         }
       }
 
       &:nth-child(even) {
-        clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+        clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
         justify-content: flex-end;
 
         @media #{$tablet-s} {
-          clip-path: polygon(0 12%, 100% 0, 100% 100%, 0 88%);
+          clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 82%);
         }
 
         .block-info {

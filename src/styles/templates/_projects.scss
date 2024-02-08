@@ -27,16 +27,6 @@
     }
   }
 
-  .quote-section {
-    max-width: 1400px;
-    padding: 0 $gutter $spacer-ext;
-
-    .section-title {
-      @include title-2();
-      text-align: center;
-    }
-  }
-
   .form-section {
     background-color: $dark-blue;
     padding: $spacer-ext $gutter $gutter;

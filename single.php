@@ -9,16 +9,7 @@ $post_id = get_the_ID();
 
         <div class="section-content">
             <?php section_title( get_the_title() ) ?>
-
-            <div class="pills-holder">
-                <?php foreach ( $categories as $category ): ?>
-                    <span class="pill"><?= $category->name ?></span>
-                <?php endforeach; ?>
-
-                <span class="pill"><?= get_the_date() ?></span>
-            </div>
         </div>
-        <?php wave_border('#FBE681') ?>
     </section>
 
     <?php while( have_posts() ): the_post(); ?>
@@ -106,8 +97,8 @@ $post_id = get_the_ID();
     <?php get_template_part('template-parts/img-with-desc',null, array(
         'data' => get_field('image_with_description_section', get_option('page_for_posts')),
         'border' => array(
-            'color' => '#FFA3C3',
-            'background-color' => '#06B6B3',
+            'color' => '#06b6b3',
+            'background-color' => '#f0f0f0',
         )
     )) ?>
 </div>
