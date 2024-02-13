@@ -215,6 +215,8 @@
     }
 
     .section-description {
+      @include text-1();
+      color: #fff;
       p {
         @include text-1();
         color: #fff;

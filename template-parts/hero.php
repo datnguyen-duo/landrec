@@ -3,17 +3,8 @@ $files = !empty($args['data']['files']) ? $args['data']['files'] : null;
 $image = !empty($args['data']['image']) ? $args['data']['image'] : null;
 $title = !empty($args['data']['title']) ? $args['data']['title'] : null;
 $desc = !empty($args['data']['description']) ? $args['data']['description'] : null;
-// $rounded_button = $args['data']['rounded_button'];
 $button = !empty($args['data']['button']) ? $args['data']['button'] : null;
-// $border_color = $args['border']['color'];
-// $border_bg_color = $args['border']['background-color'];
-// if( !$border_color ) {
-//     $border_color = '#ffba6b';
-// }
 
-// if( !$border_bg_color ) {
-//     $border_bg_color = '#fff';
-// }
 ?>
 <section class="tmplt-part-hero">
     <?php if ($files): ?>

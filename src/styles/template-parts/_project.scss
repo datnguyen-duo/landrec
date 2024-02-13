@@ -1,10 +1,5 @@
 .tmplt-part-project {
   display: block;
-
-  @media #{$tablet-s} {
-    border-radius: 30px;
-  }
-
   &:hover {
     .post-image {
       img {

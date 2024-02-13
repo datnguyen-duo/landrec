@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 get_header( 'shop' );
 $post_id = get_the_ID();
 $product = wc_get_product( $post_id );
-$categories = get_the_terms( $post_id , 'project-category');
+$categories = get_the_terms( $post_id, 'product_cat' );
 $gallery = $product->get_gallery_image_ids();
 $product_image = get_the_post_thumbnail(get_the_ID(), 'large');
 $product_model_number = get_field('model_number');
@@ -38,6 +38,7 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
 
 ?>
     <div class="single-product-page-container">
+        
         <?php
         /**
          * woocommerce_before_main_content hook.
@@ -105,9 +106,9 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
                     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_title', 5);
                     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_price', 10);
                     remove_action('woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40);
-                    do_action( 'woocommerce_single_product_summary' );
+                    // do_action( 'woocommerce_single_product_summary' );
                     ?>
-                    <div class="payment-options-holder">
+                    <!-- <div class="payment-options-holder">
                         <div class="payment-options">
                             <div class="payment-options-content">
                                 <p>We accept: </p>
@@ -143,7 +144,7 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
                                 </div>
                             <?php endif; ?>
                         </div>
-                    </div>
+                    </div> -->
 
                     <div class="product-details">
                         <?php if(
@@ -237,6 +238,8 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
                                 <?php echo $cad_files_and_pdfs_description; ?>
                             </div>
                         <?php endif; ?>
+
+                        <a class="site-button" href="/contact/">Request Pricing</a>
                     </div>
                 </div>
             </div>
@@ -245,17 +248,18 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
 
         <div class="single_product_bottom_section">
             <?php
+
             $current_post_categories_slugs = array();
 
             if( $categories ) {
                 foreach ( $categories as $category ) {
-                    array_push( $current_post_categories_slugs, $category->slug );
+                    array_push( $current_post_categories_slugs, $category->term_id );
                 }
             }
 
             $similar_posts_args = array(
                 'post_type' => 'product',
-                'posts_per_page' => 3,
+                'posts_per_page' => 4,
                 'post__not_in' => array( $post_id ),
                 'post_status' => array( 'publish' ),
                 'tax_query' => array()
@@ -264,8 +268,8 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
             if( $current_post_categories_slugs ) {
                 $similar_posts_args['tax_query'] = array(
                     array (
-                        'taxonomy' => 'category',
-                        'field' => 'slug',
+                        'taxonomy' => 'product_cat',
+                        'field' => 'id',
                         'terms' =>  $current_post_categories_slugs
                     )
                 );
@@ -282,28 +286,17 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
             if( $similar_posts->have_posts() ): ?>
                 <section class="similar-posts-section">
                     <div class="section-content">
-                        <h2 class="section-title">Similar Products</h2>
+                        <h2 class="section-title">Related Products</h2>
 
                         <div class="posts">
-                            <div class="cards-swiper">
-                                <div class="swiper-wrapper">
-                                    <?php while( $similar_posts->have_posts() ): $similar_posts->the_post(); ?>
-                                        <div class="swiper-slide">
-                                            <div class="slide-content">
-                                                <?php get_template_part('template-parts/post') ?>
-                                            </div>
+                            <div class="post">
+                                <?php while( $similar_posts->have_posts() ): $similar_posts->the_post(); ?>
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <?php get_template_part('template-parts/post') ?>
                                         </div>
-                                    <?php endwhile; wp_reset_postdata() ?>
-                                </div>
-                            </div>
-
-                            <div class="slider-buttons">
-                                <div class="cards-swiper-button cards-swiper-button-prev button-circle">
-                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
-                                </div>
-                                <div class="cards-swiper-button cards-swiper-button-next button-circle">
-                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
-                                </div>
+                                    </div>
+                                <?php endwhile; wp_reset_postdata() ?>
                             </div>
                         </div>
                     </div>
@@ -313,8 +306,8 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
             <?php get_template_part('template-parts/img-with-desc',null, array(
                 'data' => get_field('single_product_image_with_description_section','option'),
                 'border' => array(
-                    'color' => '#FFA3C3',
-                    'background-color' => '#06B6B3',
+                    'color' => '#06B6B3',
+                    'background-color' => '#F0F0F0',
                 )
             ))
             ?>
