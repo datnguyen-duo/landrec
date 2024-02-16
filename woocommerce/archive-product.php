@@ -28,7 +28,12 @@ $filter_section_description = get_field('filter_section_description', wc_get_pag
 <div class="products-page-container">
     <?php
     get_template_part('template-parts/hero',null, array(
-        'data' => get_field('hero_section', wc_get_page_id( 'shop' ) ),
+        'data' => array(
+            'title' => get_field('hero_section', wc_get_page_id( 'shop' ) )['title'],
+            'description' => get_field('hero_section', wc_get_page_id( 'shop' ) )['description'],
+            'button' => null,
+            'image' => get_the_post_thumbnail(wc_get_page_id( 'shop' )),
+        ),
         'border' => get_field('hero_section', wc_get_page_id( 'shop' ) ),
     ))
     ?>

@@ -239,7 +239,7 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
                             </div>
                         <?php endif; ?>
 
-                        <a class="site-button" href="/contact/">Request Pricing</a>
+                        <a class="site-button" href="/contact/#custom-projects">Request Pricing</a>
                     </div>
                 </div>
             </div>

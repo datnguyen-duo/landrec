@@ -6698,8 +6698,9 @@ body.page-template-faq {
   font-size: 22px;
   color: #013250;
   line-height: 1.4em;
-  margin-bottom: 3.9800995025vw;
+  margin-bottom: 2rem;
   padding: 0 35px;
+  text-wrap: initial;
 }
 @media screen and (max-width: 768px) {
   .single-product-page-container .hero-section .product-info-holder .product-info .description {
@@ -6708,7 +6709,6 @@ body.page-template-faq {
 }
 @media only screen and (min-width : 1024px) {
   .single-product-page-container .hero-section .product-info-holder .product-info .description {
-    max-width: 80%;
     padding: 0;
   }
 }
@@ -7125,15 +7125,11 @@ body.page-template-faq {
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab p {
   font-family: "halyard-display", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: #013250;
-  line-height: 1.4em;
+  line-height: 1.3em;
   margin-bottom: 10px;
-}
-@media screen and (max-width: 768px) {
-  .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab p {
-    font-size: 18px;
-  }
+  text-wrap: initial;
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab ul {
   margin-bottom: 10px;

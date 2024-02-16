@@ -176,11 +176,11 @@
 
         .description {
           @include text-1();
-          margin-bottom: px-to-vw(80);
+          margin-bottom: 2rem;
           padding: 0 35px;
+          text-wrap: initial;
 
           @media #{$tablet-l} {
-            max-width: 80%;
             padding: 0;
           }
 
@@ -609,8 +609,9 @@
             }
 
             p {
-              @include text-1();
+              @include text-2();
               margin-bottom: 10px;
+              text-wrap: initial;
             }
 
             ul {

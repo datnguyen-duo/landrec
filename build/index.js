@@ -575,14 +575,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery/dist/jquery */ "./node_modules/jquery/dist/jquery.js");
 /* harmony import */ var jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0__);
 
-let $formsFilterButtons = jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()('.forms-filter button');
-$formsFilterButtons.on('click', function () {
-  $formsFilterButtons.removeClass('active');
-  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass('active');
-  let target = '#' + jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data('target');
-  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()('.forms .form-holder').removeClass('active');
-  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(target).addClass('active');
+let $formsFilterButtons = jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(".forms-filter button");
+$formsFilterButtons.on("click", function () {
+  $formsFilterButtons.removeClass("active");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).addClass("active");
+  let target = "#" + jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).data("target");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(".forms .form-holder").removeClass("active");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(target).addClass("active");
 });
+let urlHash = window.location.hash;
+if (urlHash == "#custom-projects") {
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(".form-holder").removeClass("active");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()(".filters button").removeClass("active");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()('button[data-target="contact-form-2"]').addClass("active");
+  jquery_dist_jquery__WEBPACK_IMPORTED_MODULE_0___default()("#contact-form-2").addClass("active");
+}
 
 /***/ }),
 

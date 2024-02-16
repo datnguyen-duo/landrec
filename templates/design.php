@@ -13,6 +13,7 @@ $choice = get_field('choose_section');
         get_template_part('template-parts/hero',null, array(
             'data' => array(
                 'title' => get_field('hero_section')['title'],
+                'description' => get_field('hero_section')['description'],
                 'button' => null,
                 'files' => null,
                 'image' => get_the_post_thumbnail(),

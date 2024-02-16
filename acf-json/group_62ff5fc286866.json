@@ -51,6 +51,25 @@
                     "maxlength": "",
                     "rows": 2,
                     "new_lines": "br"
+                },
+                {
+                    "key": "field_65ce8d9257149",
+                    "label": "Text",
+                    "name": "description",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "maxlength": "",
+                    "rows": 4,
+                    "new_lines": "br"
                 }
             ]
         },
@@ -748,5 +767,5 @@
     ],
     "active": true,
     "description": "",
-    "modified": 1707361472
+    "modified": 1708035582
 }
