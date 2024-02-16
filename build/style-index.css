@@ -4063,6 +4063,11 @@ body.page-template-faq #site-header:not(.mobile-nav-is-active) .right .icons-hol
     font-size: 60px;
   }
 }
+.front-page-container .blocks-section .block .block-info .block-description {
+  text-align: justify;
+  -moz-text-align-last: center;
+  text-align-last: center;
+}
 .front-page-container .blocks-section .block .block-info .block-description p {
   font-family: "halyard-display", sans-serif;
   font-size: 18px;
@@ -4239,7 +4244,6 @@ body.page-template-faq #site-header:not(.mobile-nav-is-active) .right .icons-hol
   padding: 0 11.1111111111vw;
   box-sizing: border-box;
   position: relative;
-  text-align: center;
 }
 @media only screen and (min-width : 768px) {
   .front-page-container .img-with-desc-section .section-content {
@@ -4583,6 +4587,7 @@ body.page-template-faq #site-header:not(.mobile-nav-is-active) .right .icons-hol
 .single-post-page-container .post-editor-section .editor {
   max-width: 1200px;
   margin: auto;
+  text-wrap: initial;
 }
 .single-post-page-container .post-editor-section .editor h1 {
   font-family: "Fredoka", sans-serif;
@@ -6683,29 +6688,19 @@ body.page-template-faq {
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .basic-product-info .secondary-info p {
   font-family: "halyard-display", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: #013250;
-  line-height: 1.4em;
+  line-height: 1.3em;
   display: inline-block;
-}
-@media screen and (max-width: 768px) {
-  .single-product-page-container .hero-section .product-info-holder .product-info .basic-product-info .secondary-info p {
-    font-size: 18px;
-  }
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .description {
   font-family: "halyard-display", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: #013250;
-  line-height: 1.4em;
+  line-height: 1.3em;
   margin-bottom: 2rem;
   padding: 0 35px;
   text-wrap: initial;
-}
-@media screen and (max-width: 768px) {
-  .single-product-page-container .hero-section .product-info-holder .product-info .description {
-    font-size: 18px;
-  }
 }
 @media only screen and (min-width : 1024px) {
   .single-product-page-container .hero-section .product-info-holder .product-info .description {
@@ -7136,16 +7131,11 @@ body.page-template-faq {
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab ul li {
   font-family: "halyard-display", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   color: #013250;
-  line-height: 1.4em;
+  line-height: 1.3em;
   list-style-type: disc;
   list-style-position: inside;
-}
-@media screen and (max-width: 768px) {
-  .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab ul li {
-    font-size: 18px;
-  }
 }
 .single-product-page-container .hero-section .product-info-holder .product-info .product-details .product-info-tab ol {
   margin-bottom: 10px;

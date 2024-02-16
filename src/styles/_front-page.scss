@@ -145,6 +145,9 @@
         }
 
         .block-description {
+          text-align: justify;
+          -moz-text-align-last: center;
+          text-align-last: center;
           p {
             @include text-2();
             color: #fff;
@@ -312,8 +315,6 @@
       padding: 0 px-to-vw(40, 360);
       box-sizing: border-box;
       position: relative;
-      text-align: center;
-
       @media #{$tablet-s} {
         text-align: left;
         padding: 0 5.97vw;

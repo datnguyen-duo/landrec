@@ -168,14 +168,14 @@
             justify-content: space-between;
 
             p {
-              @include text-1();
+              @include text-2();
               display: inline-block;
             }
           }
         }
 
         .description {
-          @include text-1();
+          @include text-2();
           margin-bottom: 2rem;
           padding: 0 35px;
           text-wrap: initial;
@@ -618,7 +618,7 @@
               margin-bottom: 10px;
 
               li {
-                @include text-1();
+                @include text-2();
                 list-style-type: disc;
                 list-style-position: inside;
               }
