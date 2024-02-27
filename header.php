@@ -25,27 +25,27 @@ $checkoutPage = (is_checkout() && empty(is_wc_endpoint_url('order-received')));
                            value="<?php echo get_search_query() ?>"
                            name="s"
                            title="<?php echo esc_attr_x( 'Search for:', 'label' ) ?>">
-                    <button type="submit" role="button" class="button-circle">
-                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow.svg' ?>" alt="">
+                    <button type="submit" role="button" class="button-circle" aria-label="submit-button">
+                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow.svg' ?>" alt="arrow-icon">
                     </button>
                 </form>
 
                 <div class="button-circle close-search-overlay">
-                    <img src="<?= get_template_directory_uri().'/src/images/icons/x.svg' ?>" alt="">
+                    <img src="<?= get_template_directory_uri().'/src/images/icons/x.svg' ?>" alt="x-icon">
                 </div>
             </div>
         </div>
 
         <div class="mobile-filters-close-button-holder">
             <div class="button-circle mobile-filters-close-button">
-                <img src="<?= get_template_directory_uri().'/src/images/icons/x-white.svg' ?>" alt="">
+                <img src="<?= get_template_directory_uri().'/src/images/icons/x-white.svg' ?>" alt="x-icon">
             </div>
         </div>
 
         <div class="left">
-            <a href="<?= site_url() ?>">
-                <img class="site-logo visible" src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="">
-                <img class="site-logo hidden" src="<?= get_template_directory_uri().'/src/images/logo-green.svg' ?>" alt="">
+            <a href="<?= site_url() ?>" aria-label="home">
+                <img class="site-logo visible" src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="logo">
+                <img class="site-logo hidden" src="<?= get_template_directory_uri().'/src/images/logo-green.svg' ?>" alt="logo">
             </a>
         </div>
 

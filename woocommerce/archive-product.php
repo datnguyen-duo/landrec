@@ -39,12 +39,17 @@ $filter_section_description = get_field('filter_section_description', wc_get_pag
     ?>
 
     <section class="products-section">
-        <form class="section-content" id="products-form">
+        <div class="form-holder">
+            <h2>Have something in mind?</h2>
+            <p>Contact us below and we'll get back to you with more information.</p>
+            <?php echo do_shortcode('[contact-form-7 id="5ba6bd2" title="Products Details"]')?>
+        </div>
+        <!-- <form class="section-content" id="products-form">
             <input type="hidden" name="action" value="products_filter">
             <div id="products-response">
                 <?php print_products() ?>
             </div>
-        </form>
+        </form> -->
     </section>
 
     <section class="cta">
@@ -61,6 +66,7 @@ $filter_section_description = get_field('filter_section_description', wc_get_pag
         'data' => get_field('image_with_description_section', wc_get_page_id( 'shop' )),
         'border' => array(
             'color' => '#06B6B3',
+            'background-color' => '#F0F0F0',
         )
     ))
     ?>

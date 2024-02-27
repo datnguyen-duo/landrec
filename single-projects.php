@@ -47,9 +47,6 @@ $projects = get_field('projects', $post_id); ?>
                         <p><?= $g_location ?></p>
                     </div>
                 <?php endif; ?>
-
-                
-
             </div>
             <?php endif; ?>
 

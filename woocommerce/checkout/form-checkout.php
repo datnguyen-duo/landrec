@@ -4,7 +4,7 @@
 ?>
 <nav class="checkout_nav">
     <a href="<?= get_site_url() ?>" class="logo_holder">
-        <img class="site-logo visible" src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="">
+        <img class="site-logo visible" src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="logo">
     </a>
 
     <ul class="checkout-nav-items">

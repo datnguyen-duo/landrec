@@ -87,10 +87,10 @@
 
                         <div class="slider-buttons">
                             <div class="cards-swiper-button cards-swiper-button-prev button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                             </div>
                             <div class="cards-swiper-button cards-swiper-button-next button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                             </div>
                         </div>
                     </div>

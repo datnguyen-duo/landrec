@@ -68,7 +68,7 @@ function print_posts( $query = '' ) {
             <div class="posts-pagination">
                 <div class="pagination-page next-prev-page prev-page" data-page="<?= ($current_page == 1) ? $total_pages : $current_page-1; ?>">
                     <div class="button-circle">
-                        <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="">
+                        <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="arrow-icon">
                     </div>
                 </div>
                 <div class="posts-pages">
@@ -80,7 +80,7 @@ function print_posts( $query = '' ) {
                 </div>
                 <div class="pagination-page next-prev-page next-page" data-page="<?= ($current_page == $total_pages) ? 1 : $current_page+1; ?>">
                     <div class="button-circle">
-                        <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="">
+                        <img src="<?= get_template_directory_uri().'/src/images/icons/pagination-arrow.svg' ?>" alt="arrow-icon">
                     </div>
                 </div>
             </div>

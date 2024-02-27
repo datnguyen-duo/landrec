@@ -4064,7 +4064,6 @@ body.page-template-faq #site-header:not(.mobile-nav-is-active) .right .icons-hol
   }
 }
 .front-page-container .blocks-section .block .block-info .block-description {
-  text-align: justify;
   -moz-text-align-last: center;
   text-align-last: center;
 }
@@ -6423,12 +6422,50 @@ body.page-template-faq {
 
 .products-page-container {
   overflow: hidden;
+  background-color: #f0f0f0;
 }
 .products-page-container .tmplt-part-hero {
   background-color: #06b6b3;
 }
 .products-page-container .tmplt-part-hero::before {
   content: unset;
+}
+.products-page-container .form-holder {
+  border: none;
+  max-width: 100%;
+  padding: clamp(2rem, 6vw, 115px) 0 0;
+}
+.products-page-container .form-holder h2 {
+  font-family: "Fredoka", sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  color: #013250;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+@media only screen and (min-width : 768px) {
+  .products-page-container .form-holder h2 {
+    font-size: 60px;
+  }
+}
+.products-page-container .form-holder > p {
+  font-family: "halyard-display", sans-serif;
+  font-size: 22px;
+  color: #013250;
+  line-height: 1.4em;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 768px) {
+  .products-page-container .form-holder > p {
+    font-size: 18px;
+  }
+}
+.products-page-container .form-holder form label {
+  color: #013250;
+}
+.products-page-container .form-holder form input:not([type=checkbox]) {
+  color: #013250;
 }
 .products-page-container .products-section {
   padding: 0 15px;
@@ -6484,7 +6521,7 @@ body.page-template-faq {
 }
 .products-page-container .cta {
   text-align: center;
-  margin-bottom: calc(clamp(4rem, 8vw, 154px) * 1.5);
+  margin: calc(clamp(4rem, 8vw, 154px) * 1.5);
 }
 .products-page-container .cta .section-title {
   font-family: "Fredoka", sans-serif;

@@ -66,10 +66,10 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
                             </div>
                             <div class="swiper-pagination"></div>
                             <div class="product-swiper-button product-swiper-button-prev button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                             </div>
                             <div class="product-swiper-button product-swiper-button-next button-circle">
-                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                             </div>
                         </div>
                     </div>
@@ -159,10 +159,10 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
 
                             <div class="buttons-holder product-info-tab-navigation">
                                 <div class="product-info-tab-navigation-btn prev">
-                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                                 </div>
                                 <div class="product-info-tab-navigation-btn next">
-                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                                    <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                                 </div>
                             </div>
                         </div>
@@ -317,11 +317,11 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
         <div class="single-product-gallery-popup">
             <div class="popup-header">
                 <div class="popup-logo">
-                    <img src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="">
+                    <img src="<?= get_template_directory_uri().'/src/images/logo-light.svg' ?>" alt="logo">
                 </div>
 
                 <div class="close-popup button-circle">
-                    <img src="<?= get_template_directory_uri().'/src/images/icons/x.svg' ?>" alt="">
+                    <img src="<?= get_template_directory_uri().'/src/images/icons/x.svg' ?>" alt="x-icon">
                 </div>
             </div>
 
@@ -344,7 +344,7 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
             <div class="swiper-controls">
                 <div class="button-holder">
                     <div class="single-product-popup-button single-product-popup-swiper-btn-prev button-circle">
-                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                     </div>
                 </div>
 
@@ -354,7 +354,7 @@ $cart_popup_description = get_field('cart_popup_description', 'option');
 
                 <div class="button-holder">
                     <div class="single-product-popup-button single-product-popup-swiper-btn-next button-circle">
-                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="">
+                        <img src="<?= get_template_directory_uri().'/src/images/icons/arrow-dark.svg' ?>" alt="arrow-icon">
                     </div>
                 </div>
             </div>

@@ -5,7 +5,7 @@
         <footer id="site-footer">
             <div class="logo-holder">
                 <a href="<?= site_url() ?>">
-                    <img class="site-logo" src="<?= get_template_directory_uri() ?>/src/images/logo-light.svg" alt="">
+                    <img class="site-logo" src="<?= get_template_directory_uri() ?>/src/images/logo-light.svg" alt="logo">
                 </a>
             </div>
 
@@ -40,7 +40,7 @@
                 <p>© <?php echo date("Y"); ?> Landrec Inc. All Rights Reserved</p>
             </div>
             <div class="right">
-                <img src="<?= get_template_directory_uri() ?>/src/images/footer-logo.svg" alt="">
+                <img src="<?= get_template_directory_uri() ?>/src/images/footer-logo.svg" alt="logo">
                 <p>
                     We are a proud member of the American Society of Landscape
                     Architects and welcome collaboration with the design community.
